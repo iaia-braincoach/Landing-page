@@ -308,6 +308,29 @@ nav {
 .tf-submit:hover { opacity: 0.88; transform: translateY(-1px); }
 .tf-submitting { opacity: 0.6; pointer-events: none; }
 
+/* ── PHONE FIELD ────────────────────────────────── */
+.tf-phone-row { display: flex; gap: 10px; align-items: flex-end; margin-bottom: 20px; }
+.tf-phone-prefix {
+  flex-shrink: 0; max-width: 140px;
+  border: none; border-bottom: 2px solid var(--faint);
+  background: transparent; font-family: var(--font); font-size: 15px; color: var(--black);
+  outline: none; padding: 12px 22px 12px 0;
+  transition: border-color 0.2s; cursor: pointer;
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%236B6880' fill='none' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 2px center;
+}
+.tf-phone-prefix:focus { border-bottom-color: var(--purple); }
+.tf-phone-number {
+  flex: 1;
+  border: none; border-bottom: 2px solid var(--faint);
+  background: transparent; font-family: var(--font); font-size: 16px; color: var(--black);
+  outline: none; padding: 12px 0;
+  transition: border-color 0.2s;
+}
+.tf-phone-number:focus { border-bottom-color: var(--purple); }
+.tf-phone-number::placeholder { color: rgba(107,104,128,0.5); }
+
 /* ── FINAL CTA ─────────────────────────────────── */
 .final-cta { background: var(--purple); padding: 100px 80px; text-align: center; }
 .final-cta .section-tag { color: rgba(255,255,255,0.5); }
@@ -546,6 +569,127 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
       <button class="testi-btn" onclick="openModal('tobias')">Read full story →</button>
     </div>
 
+    <!-- Hugo -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/hugo.jpg" alt="Hugo" onerror="this.parentElement.textContent='H'"></div>
+        <div><div class="testi-name">Hugo</div><div class="testi-sport">200m / 400m · Montreal</div></div>
+      </div>
+      <div class="testi-result">Multiple PBs in training & competition</div>
+      <p class="testi-quote">"Journaling every morning and breathing techniques truly changed my life — reducing my anxiety not only in sport, but in everyday life as well."</p>
+      <button class="testi-btn" onclick="openModal('hugo')">Read full story →</button>
+    </div>
+
+    <!-- Ray -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/ray.jpg" alt="Ray Lenore" onerror="this.parentElement.textContent='R'"></div>
+        <div><div class="testi-name">Ray Lenore</div><div class="testi-sport">800m Track & Field</div></div>
+      </div>
+      <div class="testi-result">7th BUCS Indoors · 1:49 800m</div>
+      <p class="testi-quote">"I no longer feel controlled by chance emotionally. I now know when to relax and when to push. Training has become far more enjoyable because I feel in control."</p>
+      <button class="testi-btn" onclick="openModal('ray')">Read full story →</button>
+    </div>
+
+    <!-- Hakan -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/hakan.jpg" alt="Hakan Bello" onerror="this.parentElement.textContent='H'"></div>
+        <div><div class="testi-name">Hakan Bello</div><div class="testi-sport">400m · National & International</div></div>
+      </div>
+      <div class="testi-result">48.3s → 47.5s · British Indoor Final</div>
+      <p class="testi-quote">"I came in with a PB of 48.3 seconds and improved to 47.5. Making a British indoor final wasn't even in my sights before starting this coaching."</p>
+      <button class="testi-btn" onclick="openModal('hakan')">Read full story →</button>
+    </div>
+
+    <!-- Derek -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/derek.jpg" alt="Derek Kinlook" onerror="this.parentElement.textContent='D'"></div>
+        <div><div class="testi-name">Derek Kinlook</div><div class="testi-sport">Sprinting · GB</div></div>
+      </div>
+      <div class="testi-result">Confidence 8/10 · GB Sprinter</div>
+      <p class="testi-quote">"I'm more focused and calm, especially during races. By being mentally centred, my performance naturally got better. I'd rate my confidence at a solid 8 out of 10."</p>
+      <button class="testi-btn" onclick="openModal('derek')">Read full story →</button>
+    </div>
+
+    <!-- Hagen -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/hagen.jpg" alt="Hagen" onerror="this.parentElement.textContent='H'"></div>
+        <div><div class="testi-name">Hagen</div><div class="testi-sport">100m / 200m Sprinting</div></div>
+      </div>
+      <div class="testi-result">Confidence 3/10 → 9/10</div>
+      <p class="testi-quote">"I was rated 3/10 before the programme. Now I can confidently say I'm at 9/10 consistently on a daily basis. My mental clarity has skyrocketed."</p>
+      <button class="testi-btn" onclick="openModal('hagen')">Read full story →</button>
+    </div>
+
+    <!-- Kieran -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/kieran.jpg" alt="Kieran Shah" onerror="this.parentElement.textContent='K'"></div>
+        <div><div class="testi-name">Kieran Shah</div><div class="testi-sport">Sprinting · National Level</div></div>
+      </div>
+      <div class="testi-result">Focus & confidence rebuilt after injury</div>
+      <p class="testi-quote">"I'm now able to switch on and off that zone of focus when I need it. These strategies aren't just for sport — they're something I use in everyday life too."</p>
+      <button class="testi-btn" onclick="openModal('kieran')">Read full story →</button>
+    </div>
+
+    <!-- Eli -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/eli.jpg" alt="Eli" onerror="this.parentElement.textContent='E'"></div>
+        <div><div class="testi-name">Eli</div><div class="testi-sport">100m / 200m · Welsh International</div></div>
+      </div>
+      <div class="testi-result">2 PBs in Cardiff · Fastest season ever</div>
+      <p class="testi-quote">"I went into the race completely relaxed, used the visualisations we'd practised, and came away with two PBs in the 100m and 200m."</p>
+      <button class="testi-btn" onclick="openModal('eli')">Read full story →</button>
+    </div>
+
+    <!-- Theo -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/theo.jpg" alt="Theo" onerror="this.parentElement.textContent='T'"></div>
+        <div><div class="testi-name">Theo</div><div class="testi-sport">100m / 200m · National Level</div></div>
+      </div>
+      <div class="testi-result">Sub-22s 200m · Hit national standards</div>
+      <p class="testi-quote">"I finally broke 22 seconds in the 200m — a goal I've had since 2022. I've become a more confident, more focused, more consistent athlete."</p>
+      <button class="testi-btn" onclick="openModal('theo')">Read full story →</button>
+    </div>
+
+    <!-- Constance -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/constance.jpg" alt="Constance" onerror="this.parentElement.textContent='C'"></div>
+        <div><div class="testi-name">Constance</div><div class="testi-sport">Cross Country & Track · Injury Recovery</div></div>
+      </div>
+      <div class="testi-result">Mindset transformed through injury</div>
+      <p class="testi-quote">"My injury hasn't healed yet, but I now feel in a much stronger place to tackle my recovery and return to running when my body is ready."</p>
+      <button class="testi-btn" onclick="openModal('constance')">Read full story →</button>
+    </div>
+
+    <!-- Sulaiman -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/sulaiman.jpg" alt="Sulaiman Ouiles" onerror="this.parentElement.textContent='S'"></div>
+        <div><div class="testi-name">Sulaiman Ouiles</div><div class="testi-sport">Decathlon · International</div></div>
+      </div>
+      <div class="testi-result">Visualisation & mindset optimised</div>
+      <p class="testi-quote">"My thought process is completely different when I make mistakes now. I look for things I did right first — and it makes the whole experience far more positive."</p>
+      <button class="testi-btn" onclick="openModal('sulaiman')">Read full story →</button>
+    </div>
+
+    <!-- Ollie -->
+    <div class="testi-card">
+      <div class="testi-athlete">
+        <div class="testi-avatar"><img src="assets/athletes/ollie.jpg" alt="Ollie" onerror="this.parentElement.textContent='O'"></div>
+        <div><div class="testi-name">Ollie</div><div class="testi-sport">400m · Sheffield & Ireland</div></div>
+      </div>
+      <div class="testi-result">PB +1s · Semi-finals at Nationals · Confidence 9.5/10</div>
+      <p class="testi-quote">"I PB'd by over a second in the 400m and qualified for the semi-finals at nationals — something I honestly didn't believe I could do."</p>
+      <button class="testi-btn" onclick="openModal('ollie')">Read full story →</button>
+    </div>
+
   </div>
 </section>
 
@@ -588,8 +732,8 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
 
     <div class="typeform-wrap">
       <div class="tf-progress">
-        <div class="tf-bar"><div class="tf-bar-fill" id="tf-fill" style="width:12.5%"></div></div>
-        <span class="tf-count" id="tf-count">1 / 8</span>
+        <div class="tf-bar"><div class="tf-bar-fill" id="tf-fill" style="width:11.1%"></div></div>
+        <span class="tf-count" id="tf-count">1 / 9</span>
       </div>
       <div class="tf-steps" id="tf-steps">
 
@@ -608,16 +752,60 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()">← Back</button>
         </div>
 
-        <!-- Step 3: Sport -->
+        <!-- Step 3: Phone -->
         <div class="tf-step" data-index="2">
+          <div class="tf-q">What's your phone number? 📱</div>
+          <div class="tf-phone-row">
+            <select class="tf-phone-prefix" id="tf-prefix">
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+353">🇮🇪 +353</option>
+              <option value="+31">🇳🇱 +31</option>
+              <option value="+32">🇧🇪 +32</option>
+              <option value="+41">🇨🇭 +41</option>
+              <option value="+43">🇦🇹 +43</option>
+              <option value="+46">🇸🇪 +46</option>
+              <option value="+47">🇳🇴 +47</option>
+              <option value="+45">🇩🇰 +45</option>
+              <option value="+358">🇫🇮 +358</option>
+              <option value="+48">🇵🇱 +48</option>
+              <option value="+30">🇬🇷 +30</option>
+              <option value="+90">🇹🇷 +90</option>
+              <option value="+380">🇺🇦 +380</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+64">🇳🇿 +64</option>
+              <option value="+27">🇿🇦 +27</option>
+              <option value="+234">🇳🇬 +234</option>
+              <option value="+254">🇰🇪 +254</option>
+              <option value="+1876">🇯🇲 +1876</option>
+              <option value="+55">🇧🇷 +55</option>
+              <option value="+52">🇲🇽 +52</option>
+              <option value="+54">🇦🇷 +54</option>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+81">🇯🇵 +81</option>
+              <option value="+971">🇦🇪 +971</option>
+            </select>
+            <input class="tf-phone-number" type="tel" id="tf-phone" placeholder="Your phone number">
+          </div>
+          <button class="tf-continue" onclick="tfNext()">Continue →</button>
+          <button class="tf-back" onclick="tfPrev()">← Back</button>
+        </div>
+
+        <!-- Step 4: Sport -->
+        <div class="tf-step" data-index="3">
           <div class="tf-q">What sport do you compete in?</div>
           <input class="tf-input" type="text" id="tf-sport" placeholder="e.g. 100m sprinting, powerlifting, swimming…">
           <button class="tf-continue" onclick="tfNext()">Continue →</button>
           <button class="tf-back" onclick="tfPrev()">← Back</button>
         </div>
 
-        <!-- Step 4: Challenge -->
-        <div class="tf-step" data-index="3">
+        <!-- Step 5: Challenge -->
+        <div class="tf-step" data-index="4">
           <div class="tf-q">What's your biggest mental challenge in competition right now?</div>
           <div class="tf-opts">
             <div class="tf-opt" data-val="Negative self-talk / inner critic" onclick="tfPick(this,3)"><span class="tf-key">A</span> Negative self-talk / inner critic</div>
@@ -630,8 +818,8 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
         </div>
 
-        <!-- Step 5: Duration -->
-        <div class="tf-step" data-index="4">
+        <!-- Step 6: Duration -->
+        <div class="tf-step" data-index="5">
           <div class="tf-q">How long has this been holding you back?</div>
           <div class="tf-opts">
             <div class="tf-opt" data-val="A few months" onclick="tfPick(this,4)"><span class="tf-key">A</span> A few months</div>
@@ -642,8 +830,8 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
         </div>
 
-        <!-- Step 6: Lifestyle -->
-        <div class="tf-step" data-index="5">
+        <!-- Step 7: Lifestyle -->
+        <div class="tf-step" data-index="6">
           <div class="tf-q">Are you currently balancing your sport with a job or studies?</div>
           <div class="tf-opts">
             <div class="tf-opt" data-val="Yes, working full-time" onclick="tfPick(this,5)"><span class="tf-key">A</span> Yes, I'm also working full-time</div>
@@ -654,8 +842,8 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
         </div>
 
-        <!-- Step 7: Commitment -->
-        <div class="tf-step" data-index="6">
+        <!-- Step 8: Commitment -->
+        <div class="tf-step" data-index="7">
           <div class="tf-q">How committed are you to solving this in the next 90 days?</div>
           <div class="tf-opts">
             <div class="tf-opt" data-val="Very committed — ready to work" onclick="tfPick(this,6)"><span class="tf-key">A</span> Very committed — I'm ready to work</div>
@@ -665,8 +853,8 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
         </div>
 
-        <!-- Step 8: Investment -->
-        <div class="tf-step" data-index="7">
+        <!-- Step 9: Investment -->
+        <div class="tf-step" data-index="8">
           <div class="tf-q">If we're a great fit, are you open to investing in a high-level coaching programme?</div>
           <div class="tf-opts" id="tf-invest-opts">
             <div class="tf-opt" data-val="Yes, if the value is clear" onclick="tfPickLast(this)"><span class="tf-key">A</span> Yes, if the value is clear</div>
@@ -759,6 +947,103 @@ const athletes = {
     <p>At the beginning, my main goals were around my mentality in competition — both before and during. I wanted to prepare mentally in a better way and, most importantly, maintain that mindset throughout. Before starting, one of my biggest challenges was losing my head during competitions — doubt would creep in and my confidence would drop when I should have been executing.</p>
     <p>Since starting, I feel much more focused in training and more connected to my purpose. I'm much better at reframing negative thoughts and not letting them take over. What I appreciated most was how easy Iaia is to talk to — she's understanding and adapts based on how you're feeling.</p>
     <p>Right now I'd rate my confidence at a 10 out of 10. I have the tools. I see no reason why I can't achieve my goals."</p>`
+  },
+  hugo: {
+    name: 'Hugo', sport: '200m / 400m · Montreal', result: 'Multiple PBs in training & competition', img: 'assets/athletes/hugo.jpg', initial: 'H',
+    text: `<p>"My name is Hugo, I am a track and field athlete from Montreal specialising in the 200m and 400m sprints. I'm currently working towards competing at provincial and national level, with the long-term goal of breaking masters records once I reach the 30+ category.</p>
+    <p>Before working with Yaya, I struggled a lot with anxiety before races and training sessions. I would get frustrated with my results or times, and it often led to negative self-talk and doubt. I wanted to learn how to regulate my emotions better and stop letting anxiety control my performances.</p>
+    <p>The biggest change since starting one-on-one coaching has been learning how to stay grounded and connected during both training and competition. Yaya helped me visualise how I want to feel and who I want my future self to become. That completely changed my mindset. Over the past few months, I've achieved multiple personal bests in training and competition, especially in longer events that I previously struggled with.</p>
+    <p>Two tools truly changed my life: journaling every morning and breathing techniques. Journaling is now completely non-negotiable for me. Combined with the breathing exercises, it has reduced my anxiety not only in sport, but in everyday life as well.</p>
+    <p>What stood out most about Yaya's coaching was how genuine and adaptive her approach is. Nothing felt copied and pasted or like generic motivational advice. She really took the time to understand my background, my emotions, and my specific situation. The coaching feels deeply personal and tailored to the individual.</p>
+    <p>I would recommend this programme to any athlete — or honestly anyone — who wants to achieve something meaningful while becoming more self-aware."</p>`
+  },
+  ray: {
+    name: 'Ray Lenore', sport: '800m Track & Field', result: '7th BUCS Indoors · 1:49 800m', img: 'assets/athletes/ray.jpg', initial: 'R',
+    text: `<p>"My name is Ray Lenore, I am an 800-metre track and field athlete. I'm currently a 1:49 800m runner, and this year I finished 7th at the BUCS Indoor Championships.</p>
+    <p>I started this programme because I realised that, while we spend so much time training the body physically, there's often a huge part of the mental side that gets left untouched. Before working with Yaya, I felt like my emotional state before races or sessions depended too much on luck. I wanted techniques and strategies that would help me regulate my emotions consistently and make my mindset more reliable day to day.</p>
+    <p>The biggest change since starting the programme is that I no longer feel controlled by chance emotionally. In training and racing, I now know when to relax and when to push. I trust myself much more. Training has become far more enjoyable because I feel in control rather than reactive.</p>
+    <p>That shift led to a really important 10-day period where I qualified for my university's BUCS team and then went on to finish seventh at BUCS Indoors. That felt like a massive step forward and a strong foundation for what's next in my career.</p>
+    <p>The biggest tool for me was visualisation. By rehearsing situations mentally beforehand, I already knew how I wanted to think and feel when those moments arrived. It felt almost automatic, like the response had already been decided for me. That gave me a huge sense of comfort and confidence when it came time to perform.</p>
+    <p>I would recommend this programme to any athlete because performance starts with the mind. This programme helped me become not only a better athlete, but also a more well-rounded person."</p>`
+  },
+  hakan: {
+    name: 'Hakan Bello', sport: '400m · National & International', result: '48.3s → 47.5s · British Indoor Final', img: 'assets/athletes/hakan.jpg', initial: 'H',
+    text: `<p>"My name is Hakan Bello, I am a 400-metre sprinter competing at both national and international level. I compete in the British League, the Velocity Championships, and the British Athletics Championships.</p>
+    <p>I started this programme because, although I had structure in every physical aspect of my training, I realised there was a gap when it came to the mental side. My gym work, sprint sessions, and preparation were all planned out, but I had never done any formal mind training or mental coaching.</p>
+    <p>At the beginning, the goal was to have a strong indoor season, qualify for major competitions, and perform well at the Portuguese Championships and British Championships. What surprised me most was how much more I achieved than I originally expected. I ended up making a British indoor final — something that genuinely was not even in my sights before starting this coaching.</p>
+    <p>The biggest change for me has been learning how to visualise effectively. Before training sessions or races, I can now visualise exactly how I want to execute each rep or race. It removes nervousness and fear because mentally I already believe I can do it before stepping onto the track.</p>
+    <p>The results reflected that shift immediately. I came into the indoor season with a personal best of 48.3 seconds and improved to 47.5 seconds. Dropping eight tenths of a second in the 400m was a huge breakthrough for me.</p>
+    <p>Another major part of the programme was learning about flow state training. I now understand how to balance challenge and skill level properly, which has helped me stop placing limitations on myself. I would honestly describe this programme as life-changing."</p>`
+  },
+  derek: {
+    name: 'Derek Kinlook', sport: 'Sprinting · GB', result: 'Confidence 8/10 · GB Sprinter', img: 'assets/athletes/derek.jpg', initial: 'D',
+    text: `<p>"My name is Derek Kinlook, and I'm a GB sprinter. I joined this brain coaching programme because I'd always heard that sport is 90% mental, but I'd never really trained that part of myself. I usually went into competitions without thinking much about the mental side, so I wanted to see what would happen if I started working on it.</p>
+    <p>At the start, my main goal was simply to get to know myself better — to understand how my mind works, what holds me back, and how I could use that awareness to elevate my training and competition mindset.</p>
+    <p>One of the most powerful tools I discovered was visualisation. It helped me identify what was going wrong and gave me a clear way to fix it. I'd visualise specific movements, focus on what I wanted to improve, and over time I started to notice changes — small at first, but then more consistent.</p>
+    <p>Since starting the programme, I've noticed a real shift in my mindset and performance. I'm more focused and calm, especially during races. In sprinting, staying relaxed and fluid is everything — and by being mentally centred, my performance naturally got better.</p>
+    <p>What I really appreciated about Iaia's approach was how professional and personal it felt at the same time. She checked in after training, asked how things were going, and genuinely cared about my progress. That kind of communication made a huge difference.</p>
+    <p>Now, I'd rate my confidence at a solid 8 out of 10. I'd definitely recommend this programme to any athlete. Too many people focus only on physical training and neglect the mental side, even though it's what truly separates good performances from great ones."</p>`
+  },
+  hagen: {
+    name: 'Hagen', sport: '100m / 200m Sprinting', result: 'Confidence 3/10 → 9/10', img: 'assets/athletes/hagen.jpg', initial: 'H',
+    text: `<p>"My name is Hagen, I am a 100m and 200m sprinter. I joined this programme because I wanted to build the skill of confidence in high pressure environments.</p>
+    <p>At first, I had my doubts — I didn't know if it would make a difference at all, but regardless I still gave it a go and it has been an exciting experience since.</p>
+    <p>Before the programme I had big goals but didn't have the full belief that I would achieve them. But now I have shifted completely and have the full trust in my abilities and my faith to realise my dreams.</p>
+    <p>The visualisation was really powerful. I was able to see my ideal self and how he would react to challenges and achieving the goals I had set out — seeing that vividly in my mind, I was able to fully realise that I can become that person if I put into practice the skills I have been learning.</p>
+    <p>I have noticed my mental clarity and confidence has skyrocketed within this short period. I was rated a 3/10 before the programme but now I can confidently say I'm seeing 9/10 consistently on a daily basis — which is amazing.</p>
+    <p>The coach was amazing. I was able to open up freely and the conversations were professional yet comforting, as if I was talking to a friend. She personalised her approach in such a way to fulfil my needs. I would 100% recommend her to all athletes — brain training is a must and should not be neglected."</p>`
+  },
+  kieran: {
+    name: 'Kieran Shah', sport: 'Sprinting · National Level', result: 'Focus & confidence rebuilt after injury', img: 'assets/athletes/kieran.jpg', initial: 'K',
+    text: `<p>"My name is Kieran Shah, and I'm a national-level sprinter. I joined the programme because I'd had some injuries over time, and I wanted to regain the motivation and focus to bring myself back to where I was a couple of years ago. I came in very open-minded, wanting to understand myself better as an athlete.</p>
+    <p>Throughout the sessions, several exercises had a real impact, but the one that stood out most was the visualisation work — especially the one about quieting that inner noise. I used to have a lot of negative thoughts and self-criticism, and learning how to manage that made a huge difference.</p>
+    <p>Since starting, I've noticed that I'm now able to switch on and off that zone of focus when I need it. I've found a kind of sweet spot where I can tap in and get into the right state for training and performance.</p>
+    <p>I definitely felt supported and understood throughout the process. It was all very transparent, and I felt comfortable talking about how I was feeling and what was going on. That openness made it easy to be honest and get the most out of it.</p>
+    <p>What I appreciated most about Iaia was the personal touch. She really gives her all and makes it feel completely tailored to you, rather than a generic programme.</p>
+    <p>I'd 100% recommend this programme to other athletes. A lot of people don't really understand how their mind works. They think it's just about physical talent, but athletics is an incredibly mental sport. If you can strengthen that side, it changes everything."</p>`
+  },
+  eli: {
+    name: 'Eli', sport: '100m / 200m · Welsh International', result: '2 PBs in Cardiff · Fastest season ever', img: 'assets/athletes/eli.jpg', initial: 'E',
+    text: `<p>"I'm Eli, a Welsh international 100m and 200m sprinter. When I started this programme, my main goals were to build confidence, improve my focus, and respond better to setbacks in competition. I've studied sports psychology myself, but applying it on my own was always tough.</p>
+    <p>I wanted someone to guide me, challenge me, and help me put everything into practice — and that's exactly what I got with Yaya. The biggest impact for me came from visualisations and performance mapping. Learning to see and feel the athlete I want to become completely changed how I approached training and racing.</p>
+    <p>I used to let negative thoughts take over after poor performances, but this season I've been more consistent, calmer, and at my fastest. Even when races didn't go to plan, I bounced back with resilience.</p>
+    <p>One highlight was at Cardiff, shortly after the World Championships. I'd been ill and didn't expect much, but I used the visualisations we'd practised, went into a race completely relaxed, and came away with two PBs in the 100m and 200m. That gave me a huge boost of confidence and showed me how powerful these tools really are.</p>
+    <p>What I valued most about Yaya's approach was how personal it felt. She gave me the space to speak openly, then helped me reflect and understand myself better. I'd absolutely recommend this programme to any athlete. Even if you think you've got everything covered, trust me — there's always another level to your mindset."</p>`
+  },
+  theo: {
+    name: 'Theo', sport: '100m / 200m · National Level', result: 'Sub-22s 200m · Hit national standards', img: 'assets/athletes/theo.jpg', initial: 'T',
+    text: `<p>"I'm Theo, a 100m and 200m sprinter competing at national level. Every year I've been getting better, improving bit by bit. But this year, I knew I needed to go deeper if I wanted to reach that next level — not just physically, but mentally too.</p>
+    <p>At first, I was a bit hesitant to start the brain coaching programme. The mind wasn't something I'd really trained before. I always believed that if I just worked hard in training and pushed myself in the gym, the results would follow. But I've learned it's not always that simple.</p>
+    <p>The guided visualisations were a real turning point — it genuinely felt like I was running the race in my head before even stepping onto the track. Another big one was learning to run relaxed. The body tension drills helped me stop carrying stress in my body, and now I move smoother, more fluid.</p>
+    <p>The session that surprised me most was the focus drill. It made me realise how much I'd been distracted by others in races. Now I bring myself back every time. This is my race, my lane, my performance. That shift in focus has been massive.</p>
+    <p>Before, if I had a bad session or a poor race, I'd get properly frustrated. But now I'm able to reflect without spiralling — I look at what went well, what didn't, and what I can improve.</p>
+    <p>And the results speak for themselves. I finally broke 22 seconds in the 200m — a goal I've had since 2022. I was just a thousandth away from breaking 11 seconds in the 100m. I hit the standards for nationals. If you're an athlete thinking about this — do it. You'll unlock a side of yourself that's been waiting to come out."</p>`
+  },
+  constance: {
+    name: 'Constance', sport: 'Cross Country & Track · Injury Recovery', result: 'Mindset transformed through injury', img: 'assets/athletes/constance.jpg', initial: 'C',
+    text: `<p>"I'm Constance, and I'm a competitive cross country and track runner who has been sidelined by a significant injury for far longer than I expected. I joined Iaia's programme because I was really struggling to stay mentally strong and hold onto hope of returning to my sport.</p>
+    <p>I'd never tried mental coaching before, and honestly, I wasn't sure it would work for me. But as I was really struggling with my injury, I decided to give it a try.</p>
+    <p>Working with Iaia, I learned powerful techniques that transformed how I handle my injury and my mindset. One of the most impactful was the mental reset drill she taught me. I started using it before physio appointments, training attempts, or whenever negative thoughts crept in during the day. Once I got the hang of it, it became a game-changer for refocusing my mind and letting go of doubt.</p>
+    <p>We also worked on visualisation, positive self-talk and journaling, which helped me set clear, realistic goals for my future and map out how to get there. Iaia's calm and supportive presence made me feel relaxed during our sessions — that sense of ease allowed me to open up fully about my struggles.</p>
+    <p>My injury hasn't healed yet, but I now feel in a much stronger place to tackle my recovery and return to running when my body is ready. This whole experience has improved my focus, motivation and confidence. I feel excited and optimistic about my future.</p>
+    <p>I'd highly recommend Iaia's programme to any athlete looking to boost their mental game. This experience taught me that training your brain is just as crucial as training your body."</p>`
+  },
+  ollie: {
+    name: 'Ollie', sport: '400m · Sheffield & Ireland', result: 'PB +1s · Semi-finals at Nationals · Confidence 9.5/10', img: 'assets/athletes/ollie.jpg', initial: 'O',
+    text: `<p>"My name is Ollie, a 400m athlete racing nationally for the University of Sheffield and City of Sheffield, as well as in Ireland. I reached out to Yaya on Instagram after seeing her page. I'd always known the mental side was my biggest weakness, so I was immediately interested. My goal was simple: to manage my mindset better in races, not get so stressed or overwhelmed, and develop real techniques I could actually use.</p>
+    <p>The first time we did a breathing exercise, it was a proper wow moment. Straight away, I knew this was something I could use in a race environment. The control zone work was another game-changer — once I put it into practice, I couldn't believe how much calmer and more focused I felt in races.</p>
+    <p>Almost immediately, I started seeing results. I PB'd by over a second in the 400m and qualified for the semi-finals at nationals — something I honestly didn't believe I could do. It gave me confidence, belief, and the tools to perform at the level I should have been performing at all along.</p>
+    <p>It's not just my times that have improved — I actually enjoy athletics more now. I don't get overwhelmed like I used to, I'm more consistent, and I'm able to regulate myself in a way that just wasn't possible before. And it's gone beyond athletics. I use the same mindset skills to handle stress at work and in life.</p>
+    <p>When I started, my short-term goal was to just feel better on the mental side. I've smashed that. My confidence is now a 9.5 out of 10. What used to hold me back mentally is now becoming one of my strengths.</p>
+    <p>Would I recommend this programme? A thousand percent, yes. In just a couple of months, I feel like a completely different athlete. If you're struggling with the mental side of athletics, just give it a go — even try the intro call. You'll see the improvements almost straight away."</p>`
+  },
+  sulaiman: {
+    name: 'Sulaiman Ouiles', sport: 'Decathlon · International', result: 'Visualisation & mindset optimised', img: 'assets/athletes/sulaiman.jpg', initial: 'S',
+    text: `<p>"My name is Sulaiman Ouiles, I participate in the decathlon, and I have represented my country in my sport. I looked to join this programme as a way to optimise my performance — I felt any support I could get was good, however I was confident in my psychological approach to competition and wasn't sure if there would be much benefit.</p>
+    <p>Through the sessions I learnt how to improve my visualisation to make it far more effective, encompassing desired feelings and sensations. I also learnt two ways to clear my mind: one being before bed using a journal, and the other an anchor technique that could be used in training or competition. This anchor technique really helped me restructure how I dealt with failure and how I now see it as a positive thing.</p>
+    <p>I have already noticed quickly that my thought process is different when I make mistakes now. I look for things I did right before things I did wrong, and try to recreate those again next time. This makes me feel a lot more positive about my experience.</p>
+    <p>I found the coach really helpful and positive during our sessions. Especially when I struggled to find a positive side, she was supportive and helped me to find something myself.</p>
+    <p>I think if you're like me and you often struggle to see the bright side to a situation, she can help you a lot. But also, if you don't feel like there's something you need but you want to improve your competitive nature — this is a great programme for you."</p>`
   }
 };
 
@@ -784,7 +1069,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 /* ─── TYPEFORM ───────────────────────────────────────── */
 let tfCurrent = 0;
-const TF_TOTAL = 8;
+const TF_TOTAL = 9;
 const tfData = {};
 
 function tfUpdateProgress() {
@@ -835,7 +1120,8 @@ function tfNext() {
   // Validate text inputs
   if (tfCurrent === 0) { const v = document.getElementById('tf-name').value.trim(); if (!v) { document.getElementById('tf-name').focus(); return; } tfData.name = v; }
   if (tfCurrent === 1) { const v = document.getElementById('tf-email').value.trim(); if (!v || !v.includes('@')) { document.getElementById('tf-email').focus(); return; } tfData.email = v; }
-  if (tfCurrent === 2) { const v = document.getElementById('tf-sport').value.trim(); if (!v) { document.getElementById('tf-sport').focus(); return; } tfData.sport = v; }
+  if (tfCurrent === 2) { const v = document.getElementById('tf-phone').value.trim(); if (!v) { document.getElementById('tf-phone').focus(); return; } tfData.phone = document.getElementById('tf-prefix').value + ' ' + v; }
+  if (tfCurrent === 3) { const v = document.getElementById('tf-sport').value.trim(); if (!v) { document.getElementById('tf-sport').focus(); return; } tfData.sport = v; }
   if (tfCurrent < TF_TOTAL - 1) tfGoTo(tfCurrent + 1);
 }
 
@@ -858,7 +1144,7 @@ function tfPickLast(el) {
 }
 
 // Handle Enter key on text inputs
-document.querySelectorAll('.tf-input').forEach(inp => {
+document.querySelectorAll('.tf-input, .tf-phone-number').forEach(inp => {
   inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); tfNext(); }});
 });
 
@@ -870,6 +1156,7 @@ async function tfSubmit() {
   const payload = {
     name: tfData.name || '',
     email: tfData.email || '',
+    phone: tfData.phone || '',
     sport: tfData.sport || '',
     challenge: tfData['step_3'] || '',
     duration: tfData['step_4'] || '',
@@ -887,8 +1174,58 @@ async function tfSubmit() {
     });
   } catch(e) { /* redirect anyway */ }
 
+  // Save completion flag so the form is skipped on return visits
+  try {
+    localStorage.setItem('bpc_completed', 'true');
+    localStorage.setItem('bpc_name', tfData.name || '');
+  } catch(e) {}
+
   window.location.href = 'https://forms.gle/gcx7eSL6J4AiYTME8';
 }
+
+/* ─── RETURN VISIT: skip form if already submitted ──── */
+document.addEventListener('DOMContentLoaded', function() {
+  let completed = false;
+  try { completed = localStorage.getItem('bpc_completed') === 'true'; } catch(e) {}
+  if (!completed) return;
+
+  let firstName = '';
+  try { firstName = (localStorage.getItem('bpc_name') || '').split(' ')[0]; } catch(e) {}
+
+  const wrap = document.querySelector('.typeform-wrap');
+  if (!wrap) return;
+
+  wrap.innerHTML = `
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;min-height:320px;padding:32px 16px;gap:20px;">
+      <div style="font-size:44px;">✅</div>
+      <div style="font-size:19px;font-weight:700;color:var(--black);line-height:1.3;">
+        You're all set${firstName ? ', ' + firstName : ''}!
+      </div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.75;max-width:340px;">
+        You've already completed the pre-assessment questions.<br>
+        Click below to go straight to the <strong style="color:var(--black);">8D Assessment</strong>.
+      </div>
+      <a href="https://forms.gle/gcx7eSL6J4AiYTME8"
+        style="display:inline-flex;align-items:center;gap:8px;
+          background:var(--gold);color:var(--black);
+          font-family:var(--font);font-size:15px;font-weight:700;
+          padding:15px 36px;border-radius:7px;text-decoration:none;
+          margin-top:4px;transition:opacity 0.2s;"
+        onmouseover="this.style.opacity='0.88'"
+        onmouseout="this.style.opacity='1'">
+        Go to the 8D Assessment →
+      </a>
+      <button
+        onclick="try{localStorage.removeItem('bpc_completed');localStorage.removeItem('bpc_name');}catch(e){}window.location.reload();"
+        style="background:none;border:none;font-family:var(--font);
+          font-size:12px;color:var(--muted);cursor:pointer;
+          text-decoration:underline;margin-top:2px;padding:4px;">
+        Not you? Fill the form again
+      </button>
+    </div>
+  `;
+});
 </script>
 
 </body>
