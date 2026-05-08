@@ -478,10 +478,10 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
       <p class="body-text">Athletes across different sports who've committed to this approach don't just feel better. They run faster, jump higher, and compete with a consistency they couldn't access before.</p>
     </div>
     <div class="science-creds">
-      <div class="sci-cred"><div class="sci-cred-dot"></div>BSc Psychology Degree</div>
-      <div class="sci-cred"><div class="sci-cred-dot"></div>MSc Cognitive & Clinical Neuroscience</div>
-      <div class="sci-cred"><div class="sci-cred-dot"></div>Specialisation in Agonistic Trance, Sport Coaching & NLP</div>
-      <div class="sci-cred"><div class="sci-cred-dot"></div>Evidence-based methods - grounded in neuroscience & performance psychology</div>
+      <div class="sci-cred"><div class="sci-cred-dot"></div>MSc Cognitive & Clinical Neuroscience — Brunel University London</div>
+      <div class="sci-cred"><div class="sci-cred-dot"></div>Specialisation in neuro-performance, sport coaching & NLP</div>
+      <div class="sci-cred"><div class="sci-cred-dot"></div>Athletes across different sports & events</div>
+      <div class="sci-cred"><div class="sci-cred-dot"></div>100% personalised — every programme built from your 8D Assessment</div>
     </div>
   </div>
 </section>
@@ -855,14 +855,27 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
           <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
         </div>
 
-        <!-- Step 9: Investment -->
+        <!-- Step 9: Investment openness -->
         <div class="tf-step" data-index="8">
           <div class="tf-q">If we're a great fit, are you open to investing in a high-level coaching programme?</div>
+          <div class="tf-opts">
+            <div class="tf-opt" data-val="Yes, if the value is clear" onclick="tfPick(this,8)"><span class="tf-key">A</span> Yes, if the value is clear</div>
+            <div class="tf-opt" data-val="Need to understand what's included" onclick="tfPick(this,8)"><span class="tf-key">B</span> I need to understand what's included first</div>
+            <div class="tf-opt" data-val="Budget is a concern" onclick="tfPick(this,8)"><span class="tf-key">C</span> Budget is a concern — I'd need to discuss</div>
+            <div class="tf-opt" data-val="Not at this stage" onclick="tfPick(this,8)"><span class="tf-key">D</span> Not at this stage</div>
+          </div>
+          <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
+        </div>
+
+        <!-- Step 10: Investment range -->
+        <div class="tf-step" data-index="9">
+          <div class="tf-q">Our programmes are priced as a full package — not per session. Which investment range works for you?</div>
           <div class="tf-opts" id="tf-invest-opts">
-            <div class="tf-opt" data-val="Yes, if the value is clear" onclick="tfPickLast(this)"><span class="tf-key">A</span> Yes, if the value is clear</div>
-            <div class="tf-opt" data-val="Need to understand what's included" onclick="tfPickLast(this)"><span class="tf-key">B</span> I need to understand what's included first</div>
-            <div class="tf-opt" data-val="Budget is a concern" onclick="tfPickLast(this)"><span class="tf-key">C</span> Budget is a concern — I'd need to discuss</div>
-            <div class="tf-opt" data-val="Not at this stage" onclick="tfPickLast(this)"><span class="tf-key">D</span> Not at this stage</div>
+            <div class="tf-opt" data-val="Up to £600" onclick="tfPickLast(this)"><span class="tf-key">A</span> Up to £600</div>
+            <div class="tf-opt" data-val="£600–£1,000" onclick="tfPickLast(this)"><span class="tf-key">B</span> £600 – £1,000</div>
+            <div class="tf-opt" data-val="£1,000–£2,000" onclick="tfPickLast(this)"><span class="tf-key">C</span> £1,000 – £2,000</div>
+            <div class="tf-opt" data-val="£2,000+" onclick="tfPickLast(this)"><span class="tf-key">D</span> £2,000+</div>
+            <div class="tf-opt" data-val="I'd like to discuss options" onclick="tfPickLast(this)"><span class="tf-key">E</span> I'd like to discuss what's possible</div>
           </div>
           <button class="tf-submit" id="tf-submit-btn" style="display:none" onclick="tfSubmit()">Continue to the Assessment →</button>
           <button class="tf-back" onclick="tfPrev()" style="margin-top:10px">← Back</button>
@@ -1071,7 +1084,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 /* ─── TYPEFORM ───────────────────────────────────────── */
 let tfCurrent = 0;
-const TF_TOTAL = 9;
+const TF_TOTAL = 10;
 const tfData = {};
 
 function tfUpdateProgress() {
